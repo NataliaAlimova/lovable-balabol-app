@@ -8,35 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Pastel Learning App Theme */
+    --background: 240 100% 99%;
+    --foreground: 230 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 230 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 230 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 250 75% 70%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 160 60% 85%;
+    --secondary-foreground: 160 30% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 10% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 280 65% 80%;
+    --accent-foreground: 280 30% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 140 50% 70%;
+    --success-foreground: 140 30% 25%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --warning: 45 90% 75%;
+    --warning-foreground: 45 30% 25%;
 
-    --radius: 0.5rem;
+    --destructive: 0 65% 75%;
+    --destructive-foreground: 0 30% 25%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 95%;
+    --ring: 250 75% 70%;
+
+    --radius: 1rem;
+
+    /* App-specific tokens */
+    --flashcard-bg: linear-gradient(135deg, hsl(250 75% 95%), hsl(280 65% 95%));
+    --learned-bg: linear-gradient(135deg, hsl(140 50% 90%), hsl(160 60% 90%));
+    --not-learned-bg: linear-gradient(135deg, hsl(0 65% 90%), hsl(20 70% 90%));
+    --app-gradient: linear-gradient(180deg, hsl(240 100% 99%), hsl(250 75% 97%));
+    
+    --shadow-soft: 0 4px 20px hsl(250 75% 70% / 0.1);
+    --shadow-card: 0 8px 32px hsl(250 75% 70% / 0.15);
+    --shadow-elevated: 0 12px 40px hsl(250 75% 70% / 0.2);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +121,28 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    background: var(--app-gradient);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .flashcard {
+    background: var(--flashcard-bg);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-spring);
+  }
+  
+  .flashcard-learned {
+    background: var(--learned-bg);
+  }
+  
+  .flashcard-not-learned {
+    background: var(--not-learned-bg);
+  }
+  
+  .touch-action-pan-y {
+    touch-action: pan-y;
   }
 }
