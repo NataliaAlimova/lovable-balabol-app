@@ -69,7 +69,7 @@ export const WordLearner = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen overflow-hidden">
       <HeaderBar
         nativeFirst={state.nativeFirst}
         onToggleLanguage={toggleLanguageOrder}
@@ -77,7 +77,7 @@ export const WordLearner = () => {
         totalWords={state.words.length}
       />
       
-      <main className="flex-1 overflow-hidden pb-20">
+      <main className="flex-1 overflow-hidden">
         {renderContent()}
       </main>
       

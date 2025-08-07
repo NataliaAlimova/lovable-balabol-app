@@ -40,25 +40,27 @@ export const LearnView = ({
 
   return (
     <div className="h-full flex flex-col">
-      <Flashcard
-        word={currentWord}
-        showTranslation={showTranslation}
-        nativeFirst={nativeFirst}
-        onTap={onTap}
-        onSwipeLeft={onSwipeLeft}
-        onSwipeRight={onSwipeRight}
-      />
+      <div className="flex-1">
+        <Flashcard
+          word={currentWord}
+          showTranslation={showTranslation}
+          nativeFirst={nativeFirst}
+          onTap={onTap}
+          onSwipeLeft={onSwipeLeft}
+          onSwipeRight={onSwipeRight}
+        />
+      </div>
       
-      <div className="p-6 text-center">
-        <p className="text-sm text-muted-foreground mb-4">
+      <div className="p-3 text-center shrink-0">
+        <p className="text-xs text-muted-foreground mb-3">
           Swipe left for "Not Learned" • Swipe right for "Learned"
         </p>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-3 justify-center">
           <Button
             variant="destructive"
             size="sm"
             onClick={onSwipeLeft}
-            className="min-w-[100px]"
+            className="min-w-[80px] text-xs py-2"
           >
             Not Learned
           </Button>
@@ -66,7 +68,7 @@ export const LearnView = ({
             variant="secondary"
             size="sm"
             onClick={onSwipeRight}
-            className="min-w-[100px] bg-success text-success-foreground hover:bg-success/90"
+            className="min-w-[80px] text-xs py-2 bg-success text-success-foreground hover:bg-success/90"
           >
             Learned
           </Button>
