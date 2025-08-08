@@ -92,8 +92,8 @@ export const Flashcard = ({
     return 'flashcard';
   };
 
-  const rotation = dragOffset * 0.1;
-  const opacity = Math.max(0.7, 1 - Math.abs(dragOffset) * 0.002);
+  const rotation = dragOffset * 0.05;
+  const opacity = Math.max(0.8, 1 - Math.abs(dragOffset) * 0.001);
 
   return (
     <div className="flex items-center justify-center h-full px-4 py-2">
