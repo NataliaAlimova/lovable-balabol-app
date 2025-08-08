@@ -6,10 +6,12 @@ import { LearnView } from '@/components/LearnView';
 import { WordList } from '@/components/WordList';
 import { BottomNavigation } from '@/components/BottomNavigation';
 import { ImportModal } from '@/components/ImportModal';
+import { WelcomeScreen } from '@/components/WelcomeScreen';
 
 export const WordLearner = () => {
   const [activeTab, setActiveTab] = useState<TabType>('learn');
   const [showImportModal, setShowImportModal] = useState(false);
+  const [showWelcome, setShowWelcome] = useState(true);
   
   const {
     state,
@@ -30,6 +32,15 @@ export const WordLearner = () => {
   const handleImportWords = (csvContent: string) => {
     return importWordsFromCSV(csvContent);
   };
+
+  const handleGetStarted = () => {
+    setShowWelcome(false);
+  };
+
+  // Show welcome screen on first visit
+  if (showWelcome && state.words.length === 0) {
+    return <WelcomeScreen onGetStarted={handleGetStarted} />;
+  }
 
   const renderContent = () => {
     switch (activeTab) {
