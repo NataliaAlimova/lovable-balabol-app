@@ -20,9 +20,11 @@ export const HeaderBar = ({
     <div className="bg-card border-b border-border p-3 shrink-0">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <h1 className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            💬 Balabol
-          </h1>
+          <img 
+            src="/lovable-uploads/b943041f-cf95-4029-b26a-18bee7b37757.png" 
+            alt="Balabol Logo"
+            className="h-8 w-auto"
+          />
           <div className="text-xs text-muted-foreground hidden sm:block">
             {totalWords} words
           </div>

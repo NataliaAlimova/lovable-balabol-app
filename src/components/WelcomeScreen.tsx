@@ -11,11 +11,12 @@ export const WelcomeScreen = ({ onGetStarted }: WelcomeScreenProps) => {
       <div className="space-y-8 max-w-md">
         {/* Logo and App Name */}
         <div className="space-y-4">
-          <div className="relative">
-            <h1 className="text-6xl font-bold text-primary tracking-wide">
-              balabol
-            </h1>
-            <div className="absolute -top-2 -right-8 w-12 h-12 bg-accent rounded-full opacity-90 transform rotate-12"></div>
+          <div className="flex items-center justify-center">
+            <img 
+              src="/lovable-uploads/b943041f-cf95-4029-b26a-18bee7b37757.png" 
+              alt="Balabol Logo"
+              className="w-48 h-auto"
+            />
           </div>
           
           {/* Slogan */}
