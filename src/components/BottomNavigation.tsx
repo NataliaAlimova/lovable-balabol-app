@@ -23,21 +23,21 @@ export const BottomNavigation = ({
       label: 'Learn',
       icon: BookOpen,
       count: learningCount,
-      variant: 'primary' as const,
+      colorClass: 'tab-learn',
     },
     {
       id: 'not-learned' as TabType,
       label: 'Review',
       icon: X,
       count: notLearnedCount,
-      variant: 'destructive' as const,
+      colorClass: 'tab-review',
     },
     {
       id: 'learned' as TabType,
       label: 'Learned',
       icon: Check,
       count: learnedCount,
-      variant: 'success' as const,
+      colorClass: 'tab-learned',
     },
   ];
 
@@ -51,17 +51,19 @@ export const BottomNavigation = ({
           return (
             <Button
               key={tab.id}
-              variant={isActive ? (tab.variant === 'success' ? 'secondary' : tab.variant === 'primary' ? 'default' : tab.variant) : 'ghost'}
+              variant="ghost"
               size="sm"
-              className={`flex flex-col items-center gap-1 h-auto py-3 px-6 min-w-0 flex-1 ${
-                isActive && tab.variant === 'success' ? 'bg-success text-success-foreground hover:bg-success/90' : ''
+              className={`flex flex-col items-center gap-1 h-auto py-3 px-6 min-w-0 flex-1 transition-all duration-200 ${
+                isActive ? tab.colorClass : 'text-muted-foreground hover:text-foreground'
               }`}
               onClick={() => onTabChange(tab.id)}
             >
               <Icon className="h-4 w-4" />
               <span className="text-xs font-medium">{tab.label}</span>
               {tab.count > 0 && (
-                <span className="text-xs bg-primary/20 px-1.5 py-0.5 rounded-full min-w-[1.25rem] text-center">
+                <span className={`text-xs px-1.5 py-0.5 rounded-full min-w-[1.25rem] text-center ${
+                  isActive ? 'bg-current/20' : 'bg-muted'
+                }`}>
                   {tab.count}
                 </span>
               )}
