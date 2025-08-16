@@ -21,7 +21,7 @@ export const HeaderBar = ({
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <h1 className="text-lg font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            🌿 WordLearn
+            💬 Balabol
           </h1>
           <div className="text-xs text-muted-foreground hidden sm:block">
             {totalWords} words

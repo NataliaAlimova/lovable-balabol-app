@@ -8,27 +8,27 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Pastel Learning App Theme */
-    --background: 240 100% 99%;
-    --foreground: 230 15% 15%;
+    /* Balabol Brand Theme - Coral/Orange + Teal */
+    --background: 28 100% 97%;
+    --foreground: 20 14.3% 4.1%;
 
     --card: 0 0% 100%;
-    --card-foreground: 230 15% 15%;
+    --card-foreground: 20 14.3% 4.1%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 230 15% 15%;
+    --popover-foreground: 20 14.3% 4.1%;
 
-    --primary: 250 75% 70%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 12 100% 62%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 160 60% 85%;
-    --secondary-foreground: 160 30% 25%;
+    --secondary: 180 25% 75%;
+    --secondary-foreground: 20 14.3% 4.1%;
 
-    --muted: 220 20% 95%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
 
-    --accent: 280 65% 80%;
-    --accent-foreground: 280 30% 25%;
+    --accent: 180 64% 68%;
+    --accent-foreground: 0 0% 9%;
 
     --success: 140 50% 70%;
     --success-foreground: 140 30% 25%;
@@ -36,24 +36,24 @@ All colors MUST be HSL.
     --warning: 45 90% 75%;
     --warning-foreground: 45 30% 25%;
 
-    --destructive: 0 65% 75%;
-    --destructive-foreground: 0 30% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 90%;
-    --input: 220 20% 95%;
-    --ring: 250 75% 70%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 12 100% 62%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
     /* App-specific tokens */
-    --flashcard-bg: linear-gradient(135deg, hsl(250 75% 95%), hsl(280 65% 95%));
-    --learned-bg: linear-gradient(135deg, hsl(140 50% 90%), hsl(160 60% 90%));
-    --not-learned-bg: linear-gradient(135deg, hsl(0 65% 90%), hsl(20 70% 90%));
-    --app-gradient: linear-gradient(180deg, hsl(240 100% 99%), hsl(250 75% 97%));
+    --flashcard-bg: linear-gradient(135deg, hsl(28 100% 95%), hsl(12 100% 90%));
+    --learned-bg: linear-gradient(135deg, hsl(180 64% 85%), hsl(180 64% 90%));
+    --not-learned-bg: linear-gradient(135deg, hsl(12 100% 85%), hsl(16 100% 80%));
+    --app-gradient: linear-gradient(180deg, hsl(28 100% 97%), hsl(28 100% 95%));
     
-    --shadow-soft: 0 4px 20px hsl(250 75% 70% / 0.1);
-    --shadow-card: 0 8px 32px hsl(250 75% 70% / 0.15);
-    --shadow-elevated: 0 12px 40px hsl(250 75% 70% / 0.2);
+    --shadow-soft: 0 4px 20px hsl(12 100% 62% / 0.1);
+    --shadow-card: 0 8px 32px hsl(12 100% 62% / 0.15);
+    --shadow-elevated: 0 12px 40px hsl(12 100% 62% / 0.2);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -76,33 +76,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 20 14.3% 4.1%;
+    --foreground: 28 100% 97%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 24 9.8% 10%;
+    --card-foreground: 28 100% 97%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 28 100% 97%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 12 100% 62%;
+    --primary-foreground: 20 14.3% 4.1%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 180 25% 25%;
+    --secondary-foreground: 28 100% 97%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 180 64% 68%;
+    --accent-foreground: 20 14.3% 4.1%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 85.7% 97.3%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 12 100% 62%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -145,12 +145,12 @@ All colors MUST be HSL.
   }
   
   .flashcard-learned-preview {
-    background: linear-gradient(135deg, hsl(140 50% 95%), hsl(160 60% 95%));
+    background: linear-gradient(135deg, hsl(180 64% 90%), hsl(180 64% 95%));
     box-shadow: var(--shadow-card);
   }
   
   .flashcard-not-learned-preview {
-    background: linear-gradient(135deg, hsl(0 65% 95%), hsl(20 70% 95%));
+    background: linear-gradient(135deg, hsl(12 100% 90%), hsl(16 100% 85%));
     box-shadow: var(--shadow-card);
   }
   
